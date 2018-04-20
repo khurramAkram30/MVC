@@ -1,0 +1,35 @@
+﻿@using WebApplication1.Models;
+@{
+    Layout = "";
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+
+
+{
+
+    <h1>Registration Form:</h1>   
+    <div class="form-control">
+        
+        @Html.Label("username")<br />
+        @Html.TextBox("user")<br />
+
+        @Html.Label("Password")<br />
+        @Html.TextBox("pass")<br />
+
+        @Html.Label("Re-type Password")<br />
+        @Html.TextBox("pass")<br />
+
+
+        @Html.Label("Gender:")<br />
+      Male: @Html.RadioButton("Gender","male");         
+
+        Female: @Html.RadioButton("Gender", "female");
+        <br />
+    </div>
+    <br />
+    <div class="form-control">
+        <input type="submit" name="btngroup" value="Register" />
+    </div>
+}
